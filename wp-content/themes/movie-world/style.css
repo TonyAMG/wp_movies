@@ -180,3 +180,12 @@ hr.new1 {
     margin-bottom: 0;
 }
 
+.film-desc-headers {
+    font-size: 25px;
+    color: #726f6f;
+}
+
+.film-desc {
+    font-size: 18px;
+    color: #1870b5;
+}
