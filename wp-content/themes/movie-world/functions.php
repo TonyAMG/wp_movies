@@ -9,7 +9,8 @@ function register_film_post_type()
             'add_new_item' => 'Add New Film',
             'edit_item'    => 'Edit Film'
         ],
-        'has_archive'   => 'true'
+        'has_archive'   => true,
+        'rewrite'      => true
     );
     register_post_type('film', $args);
 }
