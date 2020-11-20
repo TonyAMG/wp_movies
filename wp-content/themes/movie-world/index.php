@@ -13,8 +13,8 @@
 
             <nav>
                 <ul class="pager">
-                    <li><?php next_posts_link('Назад')?></li>
-                    <li><?php previous_posts_link('Вперед')?></li>
+                    <li><?php previous_posts_link('Назад')?></li>
+                    <li><?php next_posts_link('Вперед')?></li>
                 </ul>
             </nav>
         </div><!-- /.blog-main -->
