@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
 <?php query_posts(['post_type' => 'film']) ?>
-
+    <div class="container">
     <div class="row">
     <div class="col-sm-8 blog-main">
 
