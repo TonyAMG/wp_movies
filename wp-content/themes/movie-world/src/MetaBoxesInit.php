@@ -19,8 +19,6 @@ class MetaBoxesInit
         new MetaBoxClass('runtime', 'Runtime');
         new MetaBoxClass('production_countries', 'Country');
         new MetaBoxClass('original_id', 'Original ID');
-        new MetaBoxClass('director', 'Director');
-        new MetaBoxClass('actor', 'Actor');
 
     }
 }
