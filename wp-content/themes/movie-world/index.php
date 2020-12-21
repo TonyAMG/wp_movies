@@ -1,5 +1,5 @@
 <?php get_header() ?>
-<?php echo do_shortcode('[films_gallery]') ?>
+<?php echo do_shortcode('[movies_gallery]') ?>
 <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">

@@ -4,7 +4,7 @@ jQuery('.regular').slick({
     infinite: true,
     autoplay: true,
     autoplaySpeed: 1500,
-    speed: 2000,
+    speed: 4000,
     slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToScroll: 4,
 });
