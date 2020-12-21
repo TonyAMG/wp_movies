@@ -1,27 +1,37 @@
 <?php get_header() ?>
 
-<?php query_posts(['post_type' => 'movie']) ?>
-    <div class="container">
-    <div class="row">
-    <div class="col-sm-8 blog-main">
+        <?php $movie = get_post_meta( get_the_ID() ); ?>
 
-<div class="blog-post">
-    <h2 class="blog-post-title"><?php the_title() ?></a></h2>
-<p class="blog-post-meta"><?php the_date() ?> <a href="#"><?php the_author() ?></a></p>
-<?php the_content() ?>
+        <div class="mw-theme-movie-details-page">
+            <h2 class="mw-theme-movie-title"><?=$movie['title'][0]?></h2>
+            <p class="mw-theme-movie-original-title"><?=$movie['original_title'][0]?></p>
+            <div class="mw-theme-movie-logo-column">
+                <img src="<?=$movie['poster_path'][0]?>">
+            </div>
+            <div class="mw-theme-movie-details-column">
+                <span class="mw-theme-movie-desc-headers">Релиз: &nbsp;</span>
+                <span class="mw-theme-movie-desc"><?=$movie['release_date'][0]?></span>
+                <br>
+                <span class="mw-theme-movie-desc-headers">Бюджет: &nbsp;</span>
+                <span class="mw-theme-movie-desc"><?=$movie['budget'][0]?></span>
+                <br>
+                <span class="mw-theme-movie-desc-headers">Сборы: &nbsp;</span>
+                <span class="mw-theme-movie-desc"><?=$movie['revenue'][0]?></span>
+                <br>
+                <span class="mw-theme-movie-desc-headers">Жанр: &nbsp;</span>
+                <span class="mw-theme-movie-desc"><?=$movie['genres'][0]?></span>
+                <br>
+                <span class="mw-theme-movie-desc-headers">Время: &nbsp;</span>
+                <span class="mw-theme-movie-desc"><?=$movie['runtime'][0]?></span>
+                <br>
+                <span class="mw-theme-movie-desc-headers">Страна: &nbsp;</span>
+                <span class="mw-theme-movie-desc"><?=$movie['production_countries'][0]?></span>
+            </div>
+            <div class="mw-theme-movie-overview-column">
+                <?=$movie['overview'][0]?>
+            </div>
 
-    <hr class="new1">
-</div>
+        </div>
 
-    </div>
-        <span class="film-desc-headers">Режиссер:</span>
-        <span class="film-desc">
-            <?php echo get_post_meta( get_the_ID(), 'director', true ) ?>
-        </span>
-        <br>
-        <span class="film-desc-headers">Год выпуска:</span>
-        <span class="film-desc">
-            <?php echo get_post_meta( get_the_ID(), 'release_year', true ) ?>
-
-    </div>
 <?php get_footer() ?>
+

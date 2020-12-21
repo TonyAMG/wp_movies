@@ -1,4 +1,4 @@
-        </div><!-- /.container -->
+        <!-- </div> /.container -->
 
         <footer class="blog-footer">
             <p></p>
