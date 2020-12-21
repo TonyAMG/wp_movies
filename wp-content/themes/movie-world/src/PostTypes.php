@@ -1,17 +1,20 @@
 <?php
 
-add_action('init', 'register_film_post_type');
-function register_film_post_type()
+add_action('init', 'register_movie_post_type');
+function register_movie_post_type()
 {
     $args = array(
         'public'        => true,
-        'label'         => 'Film',
+        'label'         => 'Movie',
         'labels'        => [
-            'add_new_item' => 'Add New Film',
-            'edit_item'    => 'Edit Film'
+            'add_new_item' => 'Add New Movie',
+            'edit_item'    => 'Edit Movie'
         ],
         'has_archive'   => true,
-        'rewrite'      => true
+        'rewrite'      => true,
+        'show_in_rest' => true,
+        //'map_meta_cap' => true,
+        //"supports" => ["thumbnail", "custom-fields" ]
     );
-    register_post_type('film', $args);
+    register_post_type('movie', $args);
 }
