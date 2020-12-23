@@ -21,4 +21,5 @@ class MetaBoxesInit
         new MetaBoxClass('original_id', 'Original ID');
 
     }
+
 }

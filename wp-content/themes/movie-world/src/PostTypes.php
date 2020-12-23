@@ -13,8 +13,7 @@ function register_movie_post_type()
         'has_archive'   => true,
         'rewrite'      => true,
         'show_in_rest' => true,
-        //'map_meta_cap' => true,
-        //"supports" => ["thumbnail", "custom-fields" ]
+        "supports" => false
     );
     register_post_type('movie', $args);
 }

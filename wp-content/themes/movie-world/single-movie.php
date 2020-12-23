@@ -1,7 +1,6 @@
 <?php get_header() ?>
 
-        <?php $movie = get_post_meta( get_the_ID() ); ?>
-
+        <?php $movie = get_post_custom() ?>
         <div class="mw-theme-movie-details-page">
             <h2 class="mw-theme-movie-title"><?=$movie['title'][0]?></h2>
             <p class="mw-theme-movie-original-title"><?=$movie['original_title'][0]?></p>

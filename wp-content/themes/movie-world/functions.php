@@ -10,3 +10,5 @@ require dirname(__FILE__) . '/src/ShortCodes.php';
 //require dirname(__FILE__) . '/src/AddMoviesFromDb.php';
 
 new MetaBoxesInit();
+
+require dirname(__FILE__) . '/src/apimovie.php';
