@@ -1,4 +1,5 @@
 <?php get_header() ?>
+<?php echo $movie_world_errors ?? '' ?>
 <?php echo do_shortcode('[movies_gallery]') ?>
 <div class="container">
     <div class="row">
