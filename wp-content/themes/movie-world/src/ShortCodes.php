@@ -5,7 +5,7 @@ function movies_gallery_shortcode_handler($atts)
 {
     $atts = shortcode_atts([
         'numberposts' => 50,
-        'orderby'     => 'date',
+        'orderby'     => 'rand',
         'order'       => 'DESC',
         'titles'      => 'true'
     ], $atts);
@@ -19,11 +19,12 @@ function movies_gallery_shortcode_handler($atts)
 
     $out = '<section class="regular slider">';
 
+
     foreach ($posts as $post):
         $movie = get_post_meta( $post->ID );
 
-        $title_raw = mb_substr($movie['title'][0], 0, 19);
-        $title_nice = (mb_strlen($title_raw) > 18) ? $title_raw.'...' : $title_raw;
+        $title_raw = mb_substr($movie['title'][0], 0, 17);
+        $title_nice = (mb_strlen($title_raw) > 16) ? $title_raw.'...' : $title_raw;
         $title = !($atts['titles'] === 'false') ? $title_nice : '';
 
         $link = get_the_permalink($post->ID);
