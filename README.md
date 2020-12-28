@@ -21,7 +21,7 @@ You can specify exact movie using three available parameters:
 
 > * **_title_** - localized movie title
 
-> * **_original_title** - original movie title
+> * **_original_title_** - original movie title
 
 You **must** specify **exact** value for these parameters, otherwise, you'll get no response.  
 You can use only one parameter from these three at a time.
