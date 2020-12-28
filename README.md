@@ -1,8 +1,8 @@
-<center>Movie World API Schema</center>
-======
+#  <p align="center">Movie World API Schema</p>
 
-API URLs:
-------
+
+## API URLs:
+
 * Main Site for Database live example: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/
 * Single Movie EndPoint: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movie
 * List of Movies EndPoint: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movies
@@ -13,36 +13,31 @@ API URLs:
 * List of Movies: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movies?page=3&per_page=30&release_date=2019&production_countries=US&sort_by=title
 ---
 
-List of available parameters for Single Movie EndPoint:
-------
+## List of available parameters for Single Movie EndPoint:
 
 You can specify exact movie using three available parameters:
 
-* **_original_id_** - this is main single movie entity identification parameter, it will never change
-* **_title_** - localized movie title
-* **_original_** - original movie title
+> * **_original_id_** - this is main single movie entity identification parameter, it will never change
+
+> * **_title_** - localized movie title
+
+> * **_original_** - original movie title
 
 You **must** specify **exact** value for these parameters, otherwise, you'll get no response.  
 You can use only one parameter from these three at a time.
+
 ---
 
-
-
-List of available parameters for List of Movies EndPoint:
-------
-
-
+## List of available parameters for List of Movies EndPoint:
 
 ### Pagination
-
-
 
 | Parameter      | Min  | Max    | Default
 | -------------  |------| ------ | ------ 
 | **_page_**     | `1`  | `200` | `1`
 | **_per_page_** | `1`  | `200` | `20`
 
-Those parameters are cross-depend. For example:  
+These parameters are cross-depend. For example:  
 
 http://api.com/v1/movies?page=1&per_page=100
 
@@ -53,20 +48,22 @@ With including additional filter parameters results of your response may be trem
 If you try to request more than **Max** limit, your parameter value will be automatically reset to **Default**.
 
 ---
+
 ### Filtering
-* **_genres_** - list of available properties:  
+> * **_genres_** - list of available properties:  
 `боевик`, `комедия`, `приключения`, `драма`, `триллер`, `мультфильм`, `фэнтези`,
 `семейный`, `фантастика`, `ужасы`, `мелодрама`, `криминал`, `детектив`, `военный`,
 `музыка`, `история`, `документальный`, `вестерн`
 ___
-* **_production_countries_** - list of available properties:  
+> * **_production_countries_** - list of available properties:  
 `US`, `GB`, `JP`, `CA`, `FR`, `DE`, `CN`, `ES`, `AU`, `MX`, `KR`, `BE`, `IT`, `NZ`,
 `IN`, `AR`, `HK`, `RU`, `ZA`, `DK`, `IE`, `CZ`, `NL`, `TH`, `NO`, `HU`, `BR`, `PL`,
 `AE`, `BG`, `UA`, `SE`, `FI`, `CO`, `TW`, `PR`, `RO`, `AT`, `IL`, `MT`, `CL`, `SG`  
 
 Short countries names in **ISO_3166-1** standard explained - https://en.wikipedia.org/wiki/ISO_3166-1
 ___
-* **_release_date_** - date schema is `YEAR`-`MONTH`-`DAY`  
+
+> * **_release_date_** - date schema is `YEAR`-`MONTH`-`DAY`  
 You can specify explicitly and if you want separately `YEAR`, `MONTH` and `DAY`. For example:  
 
 http://api.com/v1/movies?release_date=2020
@@ -84,16 +81,14 @@ You can use all of these parameters separately or together to get more specified
 
 ---  
 
-###Sorting
+### Sorting
 
 Additionally to filtering you also can sort out requested movies.  
 
-* **_sort_by_** - at this moment you have next sorting properties: `title`, `original_title` and `release_date`, _default_ is `release_date`
+> * **_sort_by_** - at this moment you have next sorting properties: `title`, `original_title` and `release_date`, _default_ is `release_date`
 
 
-* **_order_** - has two properties `asc` and `desc`, _default_ is `asc`
-
-
+> * **_order_** - has two properties `asc` and `desc`, _default_ is `asc`
 
 
 
@@ -102,8 +97,9 @@ Additionally to filtering you also can sort out requested movies.
 ### Search
 Also you can search movies by two parameters:  
 
-* **_title_** - localised movie title  
-* **_original_title_** - original movie title  
+> * **_title_** - localised movie title  
+
+> * **_original_title_** - original movie title  
 
 You don't have to specify the exact title, if you don't know it. You can query just few letters and filter out the results with Filtering parameters.
 
@@ -117,8 +113,8 @@ http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movi
 
 ---
 
-JSON Response Schema
------
+## JSON Response Schema
+
 
 ```json
 {
@@ -161,7 +157,7 @@ JSON Response Schema
 * (**string**) &nbsp; `hint` - useful information, only displays if you didn't get any result
 * (**array**) &nbsp;&nbsp; `result` - the array of objects (movies)
 
-### Object parameters description
+### Object properties description
 
 | Parameter             | Type      | Description                                       |
 | -------------         |------     | ------                                            |
