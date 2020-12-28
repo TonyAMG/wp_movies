@@ -21,7 +21,7 @@ You can specify exact movie using three available parameters:
 
 > * **_title_** - localized movie title
 
-> * **_original_** - original movie title
+> * **_original_title** - original movie title
 
 You **must** specify **exact** value for these parameters, otherwise, you'll get no response.  
 You can use only one parameter from these three at a time.
@@ -88,7 +88,7 @@ Additionally to filtering you also can sort out requested movies.
 > * **_sort_by_** - at this moment you have next sorting properties: `title`, `original_title` and `release_date`, _default_ is `release_date`
 
 
-> * **_order_** - has two properties `asc` and `desc`, _default_ is `asc`
+> * **_order_** - has two properties `asc` and `desc`, _default_ is `desc`
 
 
 
