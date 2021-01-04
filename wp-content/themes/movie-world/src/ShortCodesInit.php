@@ -8,6 +8,6 @@ class ShortCodesInit
 {
     public function __construct()
     {
-        new ShortCodesClass('true', 17, 2, 50, 'rand', 'asc');
+        new ShortCodesClass('true', 17, 10, 50, 'rand', 'asc');
     }
 }
