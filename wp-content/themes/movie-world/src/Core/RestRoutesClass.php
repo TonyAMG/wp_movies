@@ -35,6 +35,7 @@ class RestRoutesClass
         $this->genres = $genres;
         $this->production_countries = $production_countries;
 
+        add_filter('wp_is_application_passwords_available', '__return_true');
         add_action('rest_api_init', [$this, 'registerRestRouteForMovie']);
         add_action('shutdown', [$this, 'time_elapsed']);
     }
