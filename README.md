@@ -17,6 +17,8 @@
     * [Object properties description](#object-properties-description)
 * [Movie World API Deployment](#movie-world-api-deployment)
 
+---
+
 ## API URLs:
 
 * Main Site for Database live example: http://movie-world.top/
