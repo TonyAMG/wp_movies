@@ -1,6 +1,22 @@
 #  <p align="center">Movie World API Schema</p>
 
 
+## Contents
+
+* [API URLs](#api-urls)
+    * [Examples of using](#examples-of-using)
+* [Single Movie EndPoint](#list-of-available-parameters-for-single-movie-endpoint)
+* [List of Movies EndPoint](#list-of-available-parameters-for-list-of-movies-endpoint)
+    * [Pagination](#pagination)
+    * [Filtering](#filtering)
+    * [Sorting](#sorting)
+    * [Search](#search)
+    * [Big Example](#big-example)
+* [JSON Response Schema](#json-response-schema)
+    * [Statistics and maintenance info](#statistics-and-maintenance-info)
+    * [Object properties description](#object-properties-description)
+* [Movie World API Deployment](#movie-world-api-deployment)
+
 ## API URLs:
 
 * Main Site for Database live example: http://movie-world.top/
@@ -173,4 +189,14 @@ http://movie-world.top/wp-json/mw/v1/movies?page=2&per_page=23&genres=%D0%BA%D0%
 | `production_countries`| _string_  | List of countries where movie has been produced   |
 | `original_id`         | _string_  | Original movie **id** in themoviedb.org           |
 
+### Movie World API Deployment
+
+It's fully automatic. You just need to:
+* copy **movie-world** directory of this git to your WordPress instance, to the _**wp-content/themes**_ folder
+* activate Movie World theme in your WordPress Admin Panel
+* wait about 1-3 minutes   
+
+And you will get the fully working Movie World API with **2000** movies in your WordPress database and **2000** posters in _**wp-content/uploads/posters**_ dir
+
+_When deploying this API for the first time, you should use a test WordPress instance, so you will not lose any of your important data if something goes wrong._
 
