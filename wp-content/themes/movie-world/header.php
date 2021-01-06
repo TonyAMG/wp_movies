@@ -16,8 +16,9 @@
 <div class="blog-masthead">
     <div class="container">
         <nav class="blog-nav">
+            <a class="blog-nav-item" href="<?=get_bloginfo('url').'/wp-login.php'?>">Войти</a>
             <a class="blog-nav-item active" href="#">Новости</a>
-            <a class="blog-nav-item" href="<?php echo get_post_type_archive_link('film'); ?>">Фильмы</a>
+            <a class="blog-nav-item" href="<?php echo get_post_type_archive_link('movie'); ?>">Фильмы</a>
             <a class="blog-nav-item" href="#">Режиссеры</a>
             <a class="blog-nav-item" href="#">Статьи</a>
             <a class="blog-nav-item" href="#">О нас</a>

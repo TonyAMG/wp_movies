@@ -1,7 +1,10 @@
 <?php get_header() ?>
 
-<?php //echo do_shortcode('[films_gallery numberposts="10" orderby="name" order="ASC"]') ?>
 
-<?php echo do_shortcode('[movie_world_collector]') ?>
+<?=do_shortcode('[movies_gallery show_titles="false" movies_number="20"]')?>
+<?=do_shortcode('[movies_gallery show_titles="false" movies_number="20"]')?>
+<?=do_shortcode('[movies_gallery show_titles="false" movies_number="20"]')?>
+<?=do_shortcode('[movies_gallery show_titles="false" movies_number="20"]')?>
+<?=do_shortcode('[movies_gallery show_titles="false" movies_number="20"]')?>
 
 <?php get_footer() ?>
