@@ -189,12 +189,12 @@ http://movie-world.top/wp-json/mw/v1/movies?page=2&per_page=23&genres=%D0%BA%D0%
 | `production_countries`| _string_  | List of countries where movie has been produced   |
 | `original_id`         | _string_  | Original movie **id** in themoviedb.org           |
 
-### Movie World API Deployment
+## Movie World API Deployment
 
 It's fully automatic. You just need to:
-* copy **movie-world** directory of this git to your WordPress instance, to the _**wp-content/themes**_ folder
-* activate Movie World theme in your WordPress Admin Panel
-* wait about 1-3 minutes   
+* copy **movie-world** directory of this git **master** branch to your WordPress instance, to the _**wp-content/themes**_ folder
+* activate **Movie World** theme in your WordPress Admin Panel
+* wait about 1-3 minutes, while the **_AddMoviesToDB.php_** app automatically fills your WordPress database with movies
 
 And you will get the fully working Movie World API with **2000** movies in your WordPress database and **2000** posters in _**wp-content/uploads/posters**_ dir
 
