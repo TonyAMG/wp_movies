@@ -17,9 +17,9 @@ $locations  = [
 
 //локации опциального пака с постерами для 2000 фильмов
 $posters_pack_locations = [
-    'https://mvc-project.online/Posters.zip',
-    'http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/Posters.zip',
-    __DIR__ . '/Posters.zip'
+    'https://mvc-project.online/posters.zip',
+    'http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/posters.zip',
+    __DIR__ . '/posters.zip'
 ];
 
 
@@ -152,7 +152,7 @@ function getDataForDB($db_locations, &$movie_world_errors)
 //если на этом этапе что-то пошло не так, не беда, скрипт это учтет
 //и при добавленеии в базу данных WordPress будет добавлена ссылка
 //на удаленную версию постеров, вместо локальной
-function getPostersForDB($posters_pack_locations, $posters_dir = '/posters/', $posters_pack_name = 'Posters.zip')
+function getPostersForDB($posters_pack_locations, $posters_dir = '/posters/', $posters_pack_name = 'posters.zip')
 {
     $uploads_dir = wp_upload_dir()['basedir'];
 
