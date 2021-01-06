@@ -3,14 +3,14 @@
 
 ## API URLs:
 
-* Main Site for Database live example: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/
-* Single Movie EndPoint: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movie
-* List of Movies EndPoint: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movies
+* Main Site for Database live example: http://movie-world.top/
+* **Single Movie EndPoint**: http://movie-world.top/wp-json/mw/v1/movie
+* **List of Movies EndPoint**: http://movie-world.top/wp-json/mw/v1/movies
 
 ### Examples of using
 
-* Single Movie: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movie?original_id=238  
-* List of Movies: http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movies?page=3&per_page=30&release_date=2019&production_countries=US&sort_by=title
+* Single Movie: http://movie-world.top/wp-json/mw/v1/movie?original_id=238  
+* List of Movies: http://movie-world.top/wp-json/mw/v1/movies?page=3&per_page=30&release_date=2019&production_countries=US&sort_by=title
 ---
 
 ## List of available parameters for Single Movie EndPoint:
@@ -39,7 +39,7 @@ You can use only one parameter from these three at a time.
 
 These parameters are cross-depend. For example:  
 
-http://api.com/v1/movies?page=1&per_page=100
+http://movie-world.top/wp-json/mw/v1/movies?page=1&per_page=100
 
 With this condition - **max** pages available is `20`.  
 You take number of movies in our database (2000) and divide it on **_page_** and **_per_page_** parameters.  
@@ -66,15 +66,15 @@ ___
 > * **_release_date_** - date schema is `YEAR`-`MONTH`-`DAY`  
 You can specify explicitly and if you want separately `YEAR`, `MONTH` and `DAY`. For example:  
 
-http://api.com/v1/movies?release_date=2020
+http://movie-world.top/wp-json/mw/v1/movies?release_date=2020
 
 will show us all the movies that have been released in 2020, but you can also specify a month of release:  
 
-http://api.com/v1/movies?release_date=2020-10  
+http://movie-world.top/wp-json/mw/v1/movies?release_date=2020-10  
 
 and even a day:  
 
-http://api.com/v1/movies?release_date=2020-10-07
+http://movie-world.top/wp-json/mw/v1/movies?release_date=2020-10-07
 
 ---
 You can use all of these parameters separately or together to get more specified results, but be careful to not too tight up your query to be able get at least some results :)    
@@ -109,7 +109,7 @@ You can use **Pagination**, **Filtering**, **Sorting**, **Search** in any combin
 
 ### Big example
 
-http://ec2-18-219-233-220.us-east-2.compute.amazonaws.com/wpr/wp-json/mw/v1/movies?page=2&per_page=23&genres=%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F&release_date=2018&production_countries=US&sort_by=title&order=asc
+http://movie-world.top/wp-json/mw/v1/movies?page=2&per_page=23&genres=%D0%BA%D0%BE%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F&release_date=2018&production_countries=US&sort_by=title&order=asc
 
 ---
 
