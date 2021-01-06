@@ -11,9 +11,9 @@ function register_movie_post_type()
             'edit_item'    => 'Edit Movie'
         ],
         'has_archive'   => true,
-        'rewrite'      => true,
-        'show_in_rest' => true,
-        "supports" => false
+        'rewrite'       => true,
+        'show_in_rest'  => true,
+        "supports"      => ['title']
     );
     register_post_type('movie', $args);
 }
