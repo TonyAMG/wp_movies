@@ -1,6 +1,7 @@
 <?php get_header() ?>
 <?php echo $movie_world_errors ?? '' ?>
 <?php echo do_shortcode('[movies_gallery]') ?>
+<?php echo do_shortcode('[movies_gallery]') ?>
 <div class="container">
     <div class="row">
         <div class="col-sm-8 blog-main">

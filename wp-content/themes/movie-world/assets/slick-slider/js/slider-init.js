@@ -1,10 +1,14 @@
 jQuery('.regular').slick({
-    dots: true,
+    dots: false,
     arrows: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 1500,
-    speed: 4000,
+    speed: 2000,
     slidesToShow: 5,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
+    //rows: 4,
+    swipeToSlide: true,
+    //waitForAnimate: true,
+    touchMove: true
 });
