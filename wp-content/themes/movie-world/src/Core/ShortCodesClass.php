@@ -81,9 +81,12 @@ class ShortCodesClass
     //делаем красивые заголовки:
     //* отсекаем лишнюю длину (для иероглифов отсекаем еще больше)
     //* добавляем '...' в конце усеченных заголовков
-    //* отключаем заголовки полностью, если в шорткоде был параметр titles="false"
+    //* отключаем заголовки полностью, если в шорткоде был параметр show_titles="false"
     private function titlePrepare($title, $max_length, $max_length_cjk_characters, $atts): ?string
     {
+        if ($atts['show_titles'] === 'false')
+            return null;
+
         $chinese  = '\p{Han}+';
         $japanese = '\x{4E00}-\x{9FBF}\x{3040}-\x{309F}\x{30A0}-\x{30FF}';
         $korean   = '\x{3130}-\x{318F}\x{AC00}-\x{D7AF}';
@@ -94,9 +97,7 @@ class ShortCodesClass
 
         //обрезаем до указанной длины, добавляем '...' если нужно
         $title_raw = mb_substr($title, 0, $max_length);
-        $title_nice = (mb_strlen($title_raw) > ($max_length - 1)) ? $title_raw . '...' : $title_raw;
-
-        return !($atts['show_titles'] === 'false') ? $title_nice : null;
+        return (mb_strlen($title_raw) > ($max_length - 1)) ? $title_raw . '...' : $title_raw;
     }
 
 }
