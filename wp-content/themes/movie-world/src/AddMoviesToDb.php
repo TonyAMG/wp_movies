@@ -65,7 +65,9 @@ if (!(get_option( 'movies_db_status' ) === 'loaded') && $movies) {
                     'revenue'              => $revenue,
                     'runtime'              => $runtime,
                     'production_countries' => $countries,
-                    'original_id'          => $movie['id']
+                    'original_id'          => $movie['id'],
+                    'vote_average'         => $movie['vote_average'],
+                    'vote_count'           => $movie['vote_count']
                 ],
             ];
 

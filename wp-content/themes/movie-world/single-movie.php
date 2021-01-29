@@ -1,6 +1,9 @@
 <?php get_header() ?>
 
-        <?php $movie = get_post_custom() ?>
+        <?php
+        $movie = get_post_custom();
+        $vote = $movie['vote_average'][0] . ' [ ' . $movie['vote_count'][0] . ' ] ';
+        ?>
         <div class="mw-theme-movie-details-page">
             <h2 class="mw-theme-movie-title"><?=$movie['title'][0]?></h2>
             <p class="mw-theme-movie-original-title"><?=$movie['original_title'][0]?></p>
@@ -25,6 +28,9 @@
                 <br>
                 <span class="mw-theme-movie-desc-headers">Страна: &nbsp;</span>
                 <span class="mw-theme-movie-desc"><?=$movie['production_countries'][0]?></span>
+                <br>
+                <span class="mw-theme-movie-desc-headers">Рейтинг: &nbsp;</span>
+                <span class="mw-theme-movie-desc"><?=$vote?></span>
             </div>
             <div class="mw-theme-movie-overview-column">
                 <?=$movie['overview'][0]?>
