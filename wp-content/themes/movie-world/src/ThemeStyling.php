@@ -5,6 +5,7 @@ function movie_world_scripts()
 {
     wp_enqueue_style('bootstrap','//stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.css');
     wp_enqueue_style('theme-style', get_stylesheet_uri());
+    wp_enqueue_style('movie-world-shortcodes', get_template_directory_uri() . '/assets/css/movie-world-shortcodes.css');
     wp_enqueue_style('movie-details-page', get_template_directory_uri() . '/assets/css/movie-details-page.css');
     wp_enqueue_style('slick-slider-style', get_template_directory_uri() . '/assets/slick-slider/css/slick.css');
     wp_enqueue_style('slick-slider-theme', get_template_directory_uri() . '/assets/slick-slider/css/slick-theme.css');

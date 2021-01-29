@@ -37,10 +37,11 @@ class ShortCodesClass
     public function movies_gallery_shortcode_handler($atts): string
     {
         $atts = shortcode_atts([
-            'movies_number' => $this->movies_number,
-            'order_by'      => $this->order_by,
-            'order'         => $this->order,
-            'show_titles'   => $this->show_tiles
+            'movies_number'    => $this->movies_number,
+            'order_by'         => $this->order_by,
+            'order'            => $this->order,
+            'show_titles'      => $this->show_tiles,
+            'show_date_rating' => $this->show_tiles
         ], $atts);
 
         $movies = get_posts([
@@ -63,13 +64,23 @@ class ShortCodesClass
             );
             $poster = $movie['poster_path'][0];
             $link   = get_the_permalink($movie_post->ID);
+            $date   = $this->datePrepare($movie['release_date'][0], 'неизвестно');
+            $vote   = '<b>' . $movie['vote_average'][0] . '</b> [ ' . $movie['vote_count'][0] . ' ] ';
+
+            $date_rating = ($atts['show_date_rating'] === 'true')
+                ? '<div class="movie-info-bottom">
+                       <span class="date">' . $date . '</span>
+                       <span class="budget">' . $vote . '</span>
+                   </div>'
+                : null ;
 
             $out .= '
             <div>
                 <h2 class="blog-post-title"><a href="' . $link . '" target="_blank">' . $title . '</a></h2>
                 <a href="' . $link . '" target="_blank"><img src="' . $poster . '" alt="Poster not available"></a>
+                '. $date_rating .'
             </div>
-        ';
+            ';
         }
 
         $out .= '</section>';
@@ -98,6 +109,15 @@ class ShortCodesClass
         //обрезаем до указанной длины, добавляем '...' если нужно
         $title_raw = mb_substr($title, 0, $max_length);
         return (mb_strlen($title_raw) > ($max_length - 1)) ? $title_raw . '...' : $title_raw;
+    }
+
+
+    //делаем красивую дату
+    private function datePrepare($date_raw, $substitute_word): string
+    {
+        if (empty($date_raw))
+            return $substitute_word;
+        return preg_replace('/(\d{4})-(\d{2})-(\d{2})/', '<b>$1</b>-$2-$3', $date_raw);
     }
 
 }

@@ -1,0 +1,23 @@
+.movie-info-bottom
+{
+  display: block;
+  border-top: 4px solid #a7a59b;
+  background-color: #e7e7e5;
+  height: 34px;
+  line-height: 22px;
+  padding: 4px 6px;
+  font-size: 16px;
+  color: #1182d7;
+  margin-bottom: 13px;
+  clear:both;
+}
+
+.movie-info-bottom .date
+{
+  float: left;
+}
+
+.movie-info-bottom .budget
+{
+  float: right;
+}
